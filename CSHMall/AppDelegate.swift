@@ -7,18 +7,36 @@
 //
 
 import UIKit
-
+//#define common_theme_color RGB_XDJ(288, 58, 61)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        buildWindow()
         // Override point for customization after application launch.
         return true
     }
-
+    private func buildWindow() {
+        window = UIWindow(frame:ScreenBounds)//ScreenBounds
+        window?.rootViewController = CSHTabbarVC()
+        window!.makeKeyAndVisible()
+        setAppAppearance()
+        
+    }
+    
+    //MARK: - 分享设置
+    func setAppAppearance() {
+        let itemAppearance = UITabBarItem.appearance()
+        itemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName : common_Color, NSFontAttributeName : UIFont.systemFontOfSize(12)], forState: .Selected)
+        itemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor(), NSFontAttributeName : UIFont.systemFontOfSize(12)], forState: .Normal)
+    
+        let item = UIBarButtonItem.appearance()
+        item.setTitleTextAttributes([NSFontAttributeName : UIFont.systemFontOfSize(12), NSForegroundColorAttributeName : UIColor.blackColor()], forState: .Normal)
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
