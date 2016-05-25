@@ -36,6 +36,11 @@
 		1883E2031CE21EF10079E3B4 /* UIBarButtonItem+CSHExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883E2021CE21EF10079E3B4 /* UIBarButtonItem+CSHExtension.swift */; };
 		1883E2051CE221680079E3B4 /* UIButtom+CSHExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883E2041CE221680079E3B4 /* UIButtom+CSHExtension.swift */; };
 		1883E2081CE22FBE0079E3B4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883E2071CE22FBE0079E3B4 /* Theme.swift */; };
+		18A00A271CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00A261CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift */; };
+		18A00A2D1CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00A291CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift */; };
+		18A00A2E1CF5E5BC008BF1ED /* JOAdvertCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00A2A1CF5E5BC008BF1ED /* JOAdvertCarouselView.swift */; };
+		18A00A2F1CF5E5BC008BF1ED /* JOAdvertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00A2B1CF5E5BC008BF1ED /* JOAdvertCollectionViewCell.swift */; };
+		18A00A301CF5E5BC008BF1ED /* JOPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00A2C1CF5E5BC008BF1ED /* JOPageControl.swift */; };
 		18F8F49C1CE3632F003931F4 /* CSHHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F49B1CE3632F003931F4 /* CSHHomeVC.swift */; };
 		18F8F49E1CE3634C003931F4 /* CSHClassify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F49D1CE3634C003931F4 /* CSHClassify.swift */; };
 		18F8F4A01CE363BF003931F4 /* CSHShopCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F49F1CE363BF003931F4 /* CSHShopCarVC.swift */; };
@@ -97,6 +102,12 @@
 		1883E2021CE21EF10079E3B4 /* UIBarButtonItem+CSHExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CSHExtension.swift"; sourceTree = "<group>"; };
 		1883E2041CE221680079E3B4 /* UIButtom+CSHExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButtom+CSHExtension.swift"; sourceTree = "<group>"; };
 		1883E2071CE22FBE0079E3B4 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		18A00A261CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHHomeCollectionCell.swift; sourceTree = "<group>"; };
+		18A00A291CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOAdvertCarouselAction.swift; sourceTree = "<group>"; };
+		18A00A2A1CF5E5BC008BF1ED /* JOAdvertCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOAdvertCarouselView.swift; sourceTree = "<group>"; };
+		18A00A2B1CF5E5BC008BF1ED /* JOAdvertCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOAdvertCollectionViewCell.swift; sourceTree = "<group>"; };
+		18A00A2C1CF5E5BC008BF1ED /* JOPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JOPageControl.swift; sourceTree = "<group>"; };
+		18A00A311CF5E93C008BF1ED /* CSHMall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSHMall-Bridging-Header.h"; sourceTree = "<group>"; };
 		18F8F49B1CE3632F003931F4 /* CSHHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHHomeVC.swift; sourceTree = "<group>"; };
 		18F8F49D1CE3634C003931F4 /* CSHClassify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHClassify.swift; sourceTree = "<group>"; };
 		18F8F49F1CE363BF003931F4 /* CSHShopCarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHShopCarVC.swift; sourceTree = "<group>"; };
@@ -222,6 +233,7 @@
 			children = (
 				18F8F4A31CE364CF003931F4 /* Tabbar */,
 				1883E1C91CE215060079E3B4 /* AppDelegate.swift */,
+				18A00A311CF5E93C008BF1ED /* CSHMall-Bridging-Header.h */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -229,6 +241,7 @@
 		1883E1F81CE217270079E3B4 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				18A00A281CF5E5BC008BF1ED /* AdvertCarousel */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -289,8 +302,20 @@
 		188E1A351CF493D9001C33FC /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				18A00A261CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift */,
 			);
 			name = VIEW;
+			sourceTree = "<group>";
+		};
+		18A00A281CF5E5BC008BF1ED /* AdvertCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				18A00A291CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift */,
+				18A00A2A1CF5E5BC008BF1ED /* JOAdvertCarouselView.swift */,
+				18A00A2B1CF5E5BC008BF1ED /* JOAdvertCollectionViewCell.swift */,
+				18A00A2C1CF5E5BC008BF1ED /* JOPageControl.swift */,
+			);
+			path = AdvertCarousel;
 			sourceTree = "<group>";
 		};
 		18F8F4961CE36284003931F4 /* HomePage(首页) */ = {
@@ -563,6 +588,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1883E2011CE21E0A0079E3B4 /* UIColor+CSHExtension.swift in Sources */,
+				18A00A301CF5E5BC008BF1ED /* JOPageControl.swift in Sources */,
+				18A00A2E1CF5E5BC008BF1ED /* JOAdvertCarouselView.swift in Sources */,
+				18A00A2F1CF5E5BC008BF1ED /* JOAdvertCollectionViewCell.swift in Sources */,
 				18F8F49E1CE3634C003931F4 /* CSHClassify.swift in Sources */,
 				18F8F4A01CE363BF003931F4 /* CSHShopCarVC.swift in Sources */,
 				1883E1FF1CE218A40079E3B4 /* UIView+CSHExtension.swift in Sources */,
@@ -570,7 +598,9 @@
 				18F8F49C1CE3632F003931F4 /* CSHHomeVC.swift in Sources */,
 				1883E1CC1CE215060079E3B4 /* ViewController.swift in Sources */,
 				1883E2031CE21EF10079E3B4 /* UIBarButtonItem+CSHExtension.swift in Sources */,
+				18A00A2D1CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift in Sources */,
 				1883E1CA1CE215060079E3B4 /* AppDelegate.swift in Sources */,
+				18A00A271CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift in Sources */,
 				1883E2051CE221680079E3B4 /* UIButtom+CSHExtension.swift in Sources */,
 				1883E2081CE22FBE0079E3B4 /* Theme.swift in Sources */,
 				18F8F4A51CE36563003931F4 /* CSHTabbarVC.swift in Sources */,
@@ -716,10 +746,13 @@
 			baseConfigurationReference = 50798B6C6D848F1099035884 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSHMall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CSH.CSHMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSHMall/General/CSHMall-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -728,10 +761,12 @@
 			baseConfigurationReference = 314836FE9219DCC98CA7F3A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CSHMall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CSH.CSHMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CSHMall/General/CSHMall-Bridging-Header.h";
 			};
 			name = Release;
 		};

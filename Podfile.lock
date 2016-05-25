@@ -30,6 +30,13 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - YYCache (1.0.2)
+  - YYImage (1.0.1):
+    - YYImage/Core (= 1.0.1)
+  - YYImage/Core (1.0.1)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
@@ -39,6 +46,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SDWebImage
+  - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -48,5 +56,8 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  YYCache: c159ab4bb51e1ca4872ddadaf1778f9ec4ae40bb
+  YYImage: b41b45bc5f32bfcdf67bdfb9c09da9e9832357c0
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
 
 COCOAPODS: 0.39.0
