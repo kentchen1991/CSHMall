@@ -24,3 +24,16 @@ public let HotViewMargin: CGFloat = 10
 public let HomeCollectionViewCellMargin: CGFloat = 10
 public let HomeCollectionTextFont = UIFont.systemFontOfSize(14)
 public let HomeCollectionCellAnimationDuration: NSTimeInterval = 1.0
+
+//MARK: - 全局颜色
+public let common_background_color = RGBA(244, g: 245, b:249 ,a: 1)
+public let common_theme_color = RGBA(288, g: 58, b: 61 ,a: 1)
+public let common_black_color = RGBA(33, g: 33, b: 33 ,a: 1)
+public let common_gray_color = RGBA(248, g: 248, b: 248 ,a: 1)
+public let common_bluegray_color = RGBA(244, g: 245, b: 249 ,a: 1)
+public let common_lightgray_color = RGBA(215, g: 215, b: 215 ,a: 1)
+public let common_midgray_color = RGBA(153, g: 153, b: 153 ,a: 1)
+
+public func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) ->UIColor {
+    return UIColor (red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
+}

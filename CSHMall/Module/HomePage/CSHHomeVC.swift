@@ -12,12 +12,15 @@ class CSHHomeVC: UIViewController {
     private var collectionView:UICollectionView?
     private var adView:JOAdvertCarouselView?
     private var images:[String]?
-    
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         buildCollectionView();
         buildTableHeadView()
+        self.view.backgroundColor = common_background_color
         // Do any additional setup after loading the view.
     }
     
@@ -32,13 +35,26 @@ class CSHHomeVC: UIViewController {
         layout.minimumLineSpacing = 8
         layout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
         layout.headerReferenceSize = CGSizeMake(0, HomeCollectionViewCellMargin)
-        collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH), collectionViewLayout: layout);
+        collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64), collectionViewLayout: layout);
         view.addSubview(collectionView!)
         collectionView!.delegate = self
         collectionView!.dataSource = self
-        collectionView?.backgroundColor = UIColor.whiteColor()
-        collectionView!.registerClass(CSHHomeCollectionCell.self, forCellWithReuseIdentifier: "cell")
-        
+        collectionView?.backgroundColor = common_background_color
+        collectionView!.registerClass(CSHHomeCollectionCell.self, forCellWithReuseIdentifier: "CSHHomeCollectionCell")
+        collectionView!.registerClass(CSHHomeImageCell.self, forCellWithReuseIdentifier: "CSHHomeImageCell")
+        collectionView!.registerClass(CSHCollectionItemsCell.self, forCellWithReuseIdentifier: "CSHCollectionItemsCell")
+        collectionView!.mj_header = header
+        collectionView?.mj_footer = footer
+        header.setRefreshingTarget(self, refreshingAction: #selector(CSHHomeVC.refleashData))
+        footer.setRefreshingTarget(self, refreshingAction: #selector(addMoreHotData))
+    }
+    
+    func refleashData() {
+        header.endRefreshing()
+    }
+    
+    func addMoreHotData() {
+//        footer.endRefreshing()
     }
     
     private func buildTableHeadView() {
@@ -69,8 +85,16 @@ extension CSHHomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        return cell;
+        var cell : UICollectionViewCell?
+        
+        if indexPath.section == 0 {
+             cell = collectionView.dequeueReusableCellWithReuseIdentifier("CSHCollectionItemsCell", forIndexPath: indexPath)
+        }else if indexPath.section == 1 {
+             cell = collectionView.dequeueReusableCellWithReuseIdentifier("CSHHomeImageCell", forIndexPath: indexPath)
+        }else {
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier("CSHHomeCollectionCell", forIndexPath: indexPath)
+        }
+        return cell!;
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -82,9 +106,11 @@ extension CSHHomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
         if indexPath.section == 0 {
             itemSize = CGSizeMake(ScreenWidth, 140)
         }else if indexPath.section == 1 {
-            itemSize = CGSizeMake(ScreenWidth - HomeCollectionViewCellMargin * 2, 140)
+            itemSize = CGSizeMake(ScreenWidth - HomeCollectionViewCellMargin * 2, 100)
         } else if indexPath.section == 2 {
-            itemSize = CGSizeMake((ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, 250)
+            let w:CGFloat = (ScreenWidth - HomeCollectionViewCellMargin*3) / 2
+            let h:CGFloat = w + 60
+            itemSize = CGSizeMake(w, h)
         }
         return itemSize
     }
@@ -104,7 +130,7 @@ extension CSHHomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
 extension CSHHomeVC : JOAdverCarouselProtocol {
     func advertCarouselView(adverView: JOAdvertCarouselView, mediaImageView imageView: UIImageView, cellIndex index: Int) {
        // imageView.contentMode = .ScaleAspectFit
-        print("\(images![index])");
+//        print("\(images![index])");
         //Swift
         imageView.yy_setImageWithURL(NSURL(string: images![index]), options: [.SetImageWithFadeAnimation, .ProgressiveBlur])
         
