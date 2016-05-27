@@ -50,8 +50,6 @@
 		5C4F4D631CF6870D0052DFA1 /* CSHCollectionItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F4D621CF6870D0052DFA1 /* CSHCollectionItemsCell.swift */; };
 		5C4F4D651CF68D5D0052DFA1 /* CSHHomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F4D641CF68D5D0052DFA1 /* CSHHomeCellView.swift */; };
 		5C4F4D671CF6988C0052DFA1 /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4F4D661CF6988C0052DFA1 /* 123.png */; };
-		5C4F4D691CF6F0CE0052DFA1 /* CSHNetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F4D681CF6F0CE0052DFA1 /* CSHNetWorking.swift */; };
-		5C4F4D6B1CF6FCC00052DFA1 /* CSHNetworkingHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F4D6A1CF6FCC00052DFA1 /* CSHNetworkingHandle.swift */; };
 		CE8C62241DF8CE6B685EDF42 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88FBFE0A2274390EBD1B527 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +123,6 @@
 		5C4F4D621CF6870D0052DFA1 /* CSHCollectionItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHCollectionItemsCell.swift; sourceTree = "<group>"; };
 		5C4F4D641CF68D5D0052DFA1 /* CSHHomeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHHomeCellView.swift; sourceTree = "<group>"; };
 		5C4F4D661CF6988C0052DFA1 /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
-		5C4F4D681CF6F0CE0052DFA1 /* CSHNetWorking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSHNetWorking.swift; path = CSHMall/Module/HomePage/CSHNetWorking.swift; sourceTree = SOURCE_ROOT; };
-		5C4F4D6A1CF6FCC00052DFA1 /* CSHNetworkingHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSHNetworkingHandle.swift; path = CSHMall/Module/HomePage/CSHNetworkingHandle.swift; sourceTree = SOURCE_ROOT; };
 		C88FBFE0A2274390EBD1B527 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,8 +275,6 @@
 		1883E1FB1CE217900079E3B4 /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				5C4F4D681CF6F0CE0052DFA1 /* CSHNetWorking.swift */,
-				5C4F4D6A1CF6FCC00052DFA1 /* CSHNetworkingHandle.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -618,11 +612,9 @@
 				18F8F49C1CE3632F003931F4 /* CSHHomeVC.swift in Sources */,
 				1883E1CC1CE215060079E3B4 /* ViewController.swift in Sources */,
 				1883E2031CE21EF10079E3B4 /* UIBarButtonItem+CSHExtension.swift in Sources */,
-				5C4F4D6B1CF6FCC00052DFA1 /* CSHNetworkingHandle.swift in Sources */,
 				18A00A2D1CF5E5BC008BF1ED /* JOAdvertCarouselAction.swift in Sources */,
 				1883E1CA1CE215060079E3B4 /* AppDelegate.swift in Sources */,
 				5C4F4D651CF68D5D0052DFA1 /* CSHHomeCellView.swift in Sources */,
-				5C4F4D691CF6F0CE0052DFA1 /* CSHNetWorking.swift in Sources */,
 				5C4F4D611CF683F40052DFA1 /* CSHHomeImageCell.swift in Sources */,
 				18A00A271CF5D1CE008BF1ED /* CSHHomeCollectionCell.swift in Sources */,
 				1883E2051CE221680079E3B4 /* UIButtom+CSHExtension.swift in Sources */,
